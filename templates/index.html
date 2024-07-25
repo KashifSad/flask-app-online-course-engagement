@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Completion Predictor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Course Completion Predictor</h1>
+        <form id="predictForm" method="post" action="/predict">
+            <label for="CourseCategory">Course Category:</label>
+            <select id="CourseCategory" name="CourseCategory" required>
+                <option value="Business">Business</option>
+                <option value="Health">Health</option>
+                <option value="Science">Science</option>
+                <option value="Programming">Programming</option>
+                <option value="Arts">Arts</option>
+            </select>
+            
+            <label for="TimeSpentOnCourse">Time Spent on Course:</label>
+            <input type="number" id="TimeSpentOnCourse" name="TimeSpentOnCourse" step="any" required>
+            
+            <label for="NumberOfVideosWatched">Number of Videos Watched:</label>
+            <input type="number" id="NumberOfVideosWatched" name="NumberOfVideosWatched" required>
+            
+            <label for="NumberOfQuizzesTaken">Number of Quizzes Taken:</label>
+            <input type="number" id="NumberOfQuizzesTaken" name="NumberOfQuizzesTaken" required>
+            
+            <label for="QuizScores">Quiz Scores:</label>
+            <input type="number" id="QuizScores" name="QuizScores" step="any" required>
+            
+            <label for="CompletionRate">Completion Rate:</label>
+            <input type="number" id="CompletionRate" name="CompletionRate" step="any" required>
+            
+            <label for="DeviceType">Device Type:</label>
+            <input type="number" id="DeviceType" name="DeviceType" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
